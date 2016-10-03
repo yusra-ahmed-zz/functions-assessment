@@ -118,9 +118,10 @@ def num_spaces(sentence):
 #    (price + price * tip). **However:** passing in the tip
 #    percentage should be optional; if not given, it should
 #    default to 15%.
-tip = 0.15
-def total_meal_price(price, tip):
-    return price == price + price * tip
+
+def total_meal_price(price, tip=0.15):
+    price = price + price * tip
+    print price
 
 # 9. Write a function called 'sign_and_parity' that takes an integer as an argument and
 #    returns two pieces of information as strings ---
@@ -128,11 +129,27 @@ def total_meal_price(price, tip):
 #    should be returned in a list.
 # 
 def sign_and_parity(num):
+    if num >= 0:
+        pos_or_neg = "Positive"
+    else:
+        pos_or_neg = "Negative"
+
+    if num % 2 == 0:
+        even_or_odd = "Even"
+    else:
+        even_or_odd = "Odd"
+
+    return [even_or_odd, pos_or_neg]
 
 #    Then, write code that shows the calling of this function
 #    on a number and unpack what is returned into two
 #    variables --- sign and parity (whether it's even or odd).
 #    Print sign and parity.
+    var_sign = sign_and_parity(num)
+    var_parity = sign_and_parity(num)
+
+    print var_sign
+    print var_parity
 
 
 ################################################################################
@@ -142,7 +159,10 @@ def sign_and_parity(num):
 #    Take a name and a job title as parameters, making it so the
 #    job title defaults to "Engineer" if a job title is not passed in.
 #    Return the person's title and name in one string.
-
+def full_title(name, title=None):
+    if title == None:
+        title = "Engineer"
+    return title + " " + name
 # 2. Given a recipient name & job title and a sender name,
 #    print the following letter:
 #
@@ -151,7 +171,8 @@ def sign_and_parity(num):
 #
 #    Use the function from #1 to construct the full title for the letter's
 #    greeting.
-
+def write_letter(name, title, sender_name):
+   print "Dear {} {}, I think you are amazing! Sincerely, {}".format(title, name, sender_name)
 
 #####################################################################
 # END OF PRACTICE: You can ignore everything below.
