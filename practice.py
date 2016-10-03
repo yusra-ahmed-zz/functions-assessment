@@ -72,6 +72,7 @@ def hello_world():
 # 2. Write a function called 'say_hi' that takes a name as a string and
 #    prints "Hi" followed by the name.
 def say_hi(name):
+
     print "Hi" + " " + name
 
 # 3. Write a function called 'print_product' that takes two integers and multiplies
@@ -99,6 +100,7 @@ def print_sign(num):
 #    boolean (True or False), depending on whether the number
 #    is evenly divisible by 3.
 def is_divisible_by_three(num):
+    """Returns True or False depending on whether integer is divisible by three"""
     if num % 3 == 0:
         return True
     else:
@@ -107,6 +109,7 @@ def is_divisible_by_three(num):
 # 7. Write a function called 'num_spaces' that takes a sentence as one string and
 #    returns the number of spaces.
 def num_spaces(sentence):
+    """Returns number of spaces in a sentence"""
     spaces = 0
     for word in sentence:
         if word == " ":
@@ -120,6 +123,7 @@ def num_spaces(sentence):
 #    default to 15%.
 
 def total_meal_price(price, tip=0.15):
+    """Prints total meal price after tip or without tip depending"""
     price = price + price * tip
     print price
 
