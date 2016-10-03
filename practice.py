@@ -160,6 +160,7 @@ def sign_and_parity(num):
 #    job title defaults to "Engineer" if a job title is not passed in.
 #    Return the person's title and name in one string.
 def full_title(name, title=None):
+    """Returns the title and name in one string"""
     if title == None:
         title = "Engineer"
     return title + " " + name
@@ -172,7 +173,8 @@ def full_title(name, title=None):
 #    Use the function from #1 to construct the full title for the letter's
 #    greeting.
 def write_letter(name, title, sender_name):
-   print "Dear {} {}, I think you are amazing! Sincerely, {}".format(title, name, sender_name)
+    """Prints letter to given name"""
+    print "Dear {} {}, I think you are amazing! Sincerely, {}".format(title, name, sender_name)
 
 #####################################################################
 # END OF PRACTICE: You can ignore everything below.
