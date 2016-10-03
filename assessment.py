@@ -95,5 +95,9 @@ print addfive(5)
 print addfive(20)
 # 3. Make a function that takes in a number and a list of numbers. It should append
 #    the number to the list of numbers and return the list.
+def attach_numbers(number, list_of_numbers):
+    """Returns list of numbers with new nummber at the end."""
+    list_of_numbers.append(number)
+    return list_of_numbers
 
 #####################################################################
